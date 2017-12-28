@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "985483539649",
+    "firebase_url": "https://unittestapp-f3c42.firebaseio.com",
+    "project_id": "unittestapp-f3c42",
+    "storage_bucket": "unittestapp-f3c42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985483539649:android:9886ef8e143c6852",
+        "android_client_info": {
+          "package_name": "murali.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985483539649-18307r5v8i37aotvfa3n5hk3esedq3q2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn4EU3X73zyYNm5-5N_JN75nEs8o5uJ6k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
