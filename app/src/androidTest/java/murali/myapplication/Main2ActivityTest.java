@@ -27,7 +27,7 @@ public class Main2ActivityTest {
         protected Intent getActivityIntent() {
             InstrumentationRegistry.getTargetContext();
             Intent intent = new Intent();
-            intent.putExtra("key", 50);
+            intent.putExtra("key", 10);
             return intent;
         }
     };
@@ -44,7 +44,7 @@ public class Main2ActivityTest {
     public void checkValue() {
         TextView textView = main2Activity.findViewById(R.id.test_tv2);
         Log.d("textview", "value is " + textView.getText().toString());
-        assertThat(Integer.parseInt(textView.getText().toString()), is(50));
+        assertThat(Integer.parseInt(textView.getText().toString()), is(10));
 //        getInstrumentation().waitForMonitor(monitor);
 
     }

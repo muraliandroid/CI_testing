@@ -50,7 +50,7 @@ public class MainActivityTest {
         Activity secondActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 5000);
         assertNotNull(secondActivity);
         TextView tv2 = secondActivity.findViewById(R.id.test_tv2);
-        assertThat(tv2.getText().toString(), is("TextView"));
+        assertThat(tv2.getText().toString(), is("10"));
 
         ActivityLifecycleMonitorRegistry.getInstance().addLifecycleCallback(new ActivityLifecycleCallback() {
             @Override
