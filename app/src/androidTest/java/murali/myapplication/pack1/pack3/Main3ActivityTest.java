@@ -1,4 +1,4 @@
-package murali.myapplication;
+package murali.myapplication.pack1.pack3;
 
 import android.app.Instrumentation;
 import android.support.test.rule.ActivityTestRule;
@@ -11,10 +11,12 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import murali.myapplication.Main3Activity;
+import murali.myapplication.R;
 import murali.myapplication.rest_api_work.RestPresenter;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 
 public class Main3ActivityTest {

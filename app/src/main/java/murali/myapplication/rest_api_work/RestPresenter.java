@@ -1,7 +1,6 @@
 package murali.myapplication.rest_api_work;
 
 import android.content.Context;
-import android.util.Log;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,11 +34,6 @@ public class RestPresenter {
     }
 
     public void addNewEmployee(String empName, String empJob) {
-/*        if (mListener != null)
-            Log.d("*RestPresenter", "mListener is not null");
-        else
-            Log.d("*RestPresenter", "mListener is null");*/
-
         //mListener.showLoading();
         Call<PostFieldNewUserResponse> apiClient = mRetrofitAPIInterface.createNewUser(empName, empJob);
         apiClient.enqueue(new Callback<PostFieldNewUserResponse>() {
