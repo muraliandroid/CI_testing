@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Button perform click action", Toast.LENGTH_SHORT).show();
                 Log.d("btn", "btn clicked");
                 Bundle bundle = new Bundle();
-                bundle.putInt("key1", 20);
+                bundle.putInt("key-master", 20);
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
