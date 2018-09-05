@@ -1,24 +1,25 @@
 language: android
 android:
   components:
-    - tools # to get the new `repository-11.xml`
-    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
-    - platform-tools
-    - extra-google-google_play_services
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - build-tools-25.0.0
-    - build-tools-26.0.2
-    - android-26
-    - android-25
-    - android-22 # Android platform used by your alternative emulator
-    - sys-img-armeabi-v7a-android-22
-
+  - tools
+  - tools
+  - platform-tools
+  - extra-google-google_play_services
+  - extra-google-m2repository
+  - extra-android-m2repository
+  - build-tools-25.0.0
+  - build-tools-26.0.2
+  - android-26
+  - android-25
+  - android-22
+  - sys-img-armeabi-v7a-android-22
 before_script:
-    - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-    - emulator -avd test -no-skin -no-audio -no-window &
-    - android-wait-for-emulator
-    - adb shell input keyevent 82 &
-
+- echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
+- emulator -avd test -no-skin -no-audio -no-window &
+- android-wait-for-emulator
+- adb shell input keyevent 82 &
 script:
-    - ./gradlew build connectedCheck
+- "./gradlew build connectedCheck"
+env:
+  routingId:
+    secure: wgpRjWxtnxSqHRKM4UlVMrbw4ccNWA75zixyWqJ6Y3yEH6AwqpV+SmIC8GW6A23VH5B65rWYMO9ncrhFpNhhVCux/lGbgliCbfFeWk0K0KjgqiLipctbhnelfj2eR4wwHiHw61U8uN7ksDlpsoY04eMMDNA+ahA9fgzjqvKQsqqoVnR6AYd1f3j/S4pbyDp7PqRdzHGPU8nkkNPihePnBgoJ8PK1S9l0lCC09o5XZNxdD1RzrmvBrAyZHd7jK+x06DUiErcv7i9KUZ8TLz+gbNdCkKLu/NcttnTdWsGg3ybmoQZLadENzG+b0R3ec7FZILj2B2DqZEupMGVUY0BYRZCO49dnMa2AJZrjR1LSdcrZSSdm6Vg3i4RG9LINUWXsC2G/tt6zlUhUdUttL5yuk22TnrXFH7WvHQmFslvIeM3k3rFqE+wyU2jjAsXEZIC1zVOvnIs6Q/NVk7IeCql6JdNG8nCc3FE0pM0HkbI23B4NcBnOgSa4eRupban4UVR521WDZsXgE8V/XkIbVwRoHOd6Xbjl26T/e5ownsFBsQifC7KOZ3WA30s0hYg+XTIW810cE62wO/vFUCyTzrI0rGKh0PZqSJWNQWI8zhm9tL+t/I4+dv8emLJcDk57i0/QnSPhb0ds8sTdf0TZYoyJsSuDbMraZnrwvIQHN1J+ubo=

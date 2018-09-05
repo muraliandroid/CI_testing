@@ -39,7 +39,7 @@ if (isRunningOnTravis) {
     println "CI not running"
 }
 
-def user = System.getenv('username')
+def user = System.getenv('routingId')
 println user
 
 
