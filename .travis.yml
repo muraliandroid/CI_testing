@@ -1,37 +1,31 @@
 language: android
+jdk: oraclejdk8g
+env:
+  global:
+  - ANDROID_TARGET=android-15
+  - ANDROID_ABI=armeabi-v7a
+  #- secure: pcw5gxywpfV5EQr5WjINj7Xf5cryxrWUAmzJe9VAFK+PI4M01TljFt2AROmJABKGk7KePw4PkFm6QkUF0fRSdbGBDfWBELYbeFEi1rDwD6G2uw6EeHnj9h4qah/0Jnk4HmWyYyGNm9wpxizBkutxdvbFR/pMJUyABo5Zslj+qwf9WiI/6uZVfRanXfVPFafg7CqmfRjW4YlW+sei3fwjA4HUdOVBvNal10Qm2DZvGOGnxlU9zlh0UTIG6vshi8EEOHgSM9yWYcj1MkOQIvYYPLRVxmD2P5IRYspy1G41tUnj4oqMlX87dWkfJMKVxlBHY5eMkGhMhRTJG4cbDa3rR6WqLN20Cdj32/WD7QNKheUEbKHqpkMmP2JelQM8K7uH4eXPOhJJmvC0st91AKVbEseLhe9haTf8KEHg3VYj+QhRU4e3z/gLotV5EvlzLY7AzG6hvtRiVlJBzN/dQE2r9R1l8XRkXrJgMKm8lOHXGJcoW6pkH5Sl9QzyCvLdxEFn7jtGP1M67ENRPmzT8H1hQN0YIrVlnts7q4mJ/Wi0hiGnb4vZPPDebR8drrcpAAiJ7geWOD9PX/Ag4JK9vNWiwFwmjP2YAEJVlM4OQrU/llYEkIeoxlqM/xrm3DcJJ1gRCVUlvteoWbYWmrZJvGcBSPC4VrDu11euVoR1579pU+s=
+  #- secure: ySk5/2Hj2JV9niagVjl+i/kpIx8/x58qOTLADGdfayb0LZZirbWerh9xkjpD3cDhQiOk/hxY6sR5ZF4Qxk32D1CPqPq1mNtXlWMUTC3/6HcZtCLu5zJn4UjgwFUkS31bVvUiQiEVJJpAAkT8JG1FOhGYRq6IDRDmuewV1/HuJFLOWIxxhIjrTnN8WCLHJyC2At8v6XtAZIHqK9WobyDQJXVyH81HtUpqSFra6h0rk2uxmypli0Z7fhRuLqVmMOOiBeU9e3qU7IhUGWMPpPIo+s6BObLH/nLoLyZJ9OBQAqtTGZc/2A11OLRexaiIe3vmHcXlOKc09uRg/4281/LpBpW/wm1AWVO2F4BluMfKc+iNClEOhFVRdCzcbTEtBmiZCGX6Ch+MQ5PHrP8mAh+8ftSx8PjdIaXlpN1kivHwniyAagISHp9kPSMkx3CORTJExCbF+o5oepxLczB06Bl1dPwxGt9wb8KwBFVJCPXFMAgFmxa5hSJqGc9sqhIjxmiBPq4hFDJmiDaAJcyFUeiQOLEXjY7ytvDOLB5pc5atUiN4IB5FrdSRnRRlr2nNvag2n/ENUyjntg4yvb0KCpRLtjEGKGsF/zdvpx1PuFh5HZXPe9vLTcKRc6NcWIkw9ttzyWfcDzV5Xr4W2fnFFSCu1PJKYdP1GXKdbLmKexN+hWg=
+  username:
+    secure: JP/jEZptFQrwTxjUkBt2mvhG9Glu8q2qoYsGk9hoEX8eLeexPfAh8q0rjq8xOK/b2/oUg7oobjlqvKx+x+P61eVrRYzM1MacLe4f2VNWPFwMFyI+TYfBweivgaRvDG5smveHXw7+ke5DlcbDqQ4+AKvBr29Bk3oklvJ3alEBnkSpKEcSHqNov+udSfs55U9ZlOUmYgWl+NhvYw5Ww9rYLRUQvHH6AgU7cIqLYZWWemL6nZeZuH9sLhSylAdQrK90Tb6+9rQQBU4unSldiw0BCLOjwz5E/oTO5BbUaqG36oxW6zieVfgYbgx7T6j5fxeTx1G5/d3njJhSPbDlKWcEl+5SsUht7CMJ+52l37jNdymQ1wQz8ulnS0FLBbOnqULlCnNS17tAefpASmtj23Z7S0l/ZvJraSJG6LDwoFA5HCwwpyO+V+d6YQHQr1vursEAbYAN9gEgIRWOSuC5UXbt84DGOiFnBsWgTxdEugf6mMZLRd0nmqSp9lfcMOMPnYrO6CaewtzyVdIIlWR/q02rwlcmDi1nhyeRInD0k1mh+ZT+AogWMoj6OZZfTxTG2MDZXEzky4xbuzdrF0tjV46sJWxYckkxSzASai8YBJygZoWN59/9USqfX9Z9EhGcrrOhK2SCK0oYSXflxh0zfWqN5KCdfk8PIalrRM25Cg+EcF0=
 android:
- components:
-cd
-    # The BuildTools version used by your project
-    - build-tools-26.0.2
-
-    # The SDK version used to compile your project
-    - android-26
-    - android-19
-
-    # Additional components
-    - extra-google-google_play_services
-
-
-    # Specify at least one system image,
-    # if you need to run emulator(s) during your tests
-    # - sys-img-armeabi-v7a-android-26
-    - sys-img-armeabi-v7a-android-19
-
-    # Emulator Management: Create, Start and Wait
+  components:
+  - build-tools-26.0.2
+  - android-26
+  - android-19
+  - extra-google-google_play_services
+  - sys-img-armeabi-v7a-android-26
+  - sys-img-armeabi-v7a-android-19
 before_script:
-      # - echo no | android create avd --force -n test -t android-26 --abi armeabi-v7a
-      - ch | android create avd --force -n test -t android-19 --abi armeabi-v7a
-      - emulator -avd test -no-audio -no-window &
-      - android-wait-for-emulator
-      - adb shell input keyevent 82 &
-
+- ch | android create avd --force -n test -t android-19 --abi armeabi-v7a
+- emulator -avd test -no-audio -no-window &
+- android-wait-for-emulator
+- adb shell input keyevent 82 &
 script:
-          - ./gradlew connectedAndroidTest
-
+- ./gradlew connectedAndroidTest
 before_cache:
-      - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-      - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
      directories:
        - $HOME/.gradle/caches/

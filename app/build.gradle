@@ -31,8 +31,16 @@ android {
 
 
 
+def isRunningOnTravis = System.getenv("CI") == "true"
 
+if (isRunningOnTravis) {
+    println "CI running"
+} else {
+    println "CI not running"
+}
 
+def user = System.getenv('username')
+println user
 
 
 dependencies {
