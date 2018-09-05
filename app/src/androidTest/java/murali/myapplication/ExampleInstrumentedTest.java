@@ -20,7 +20,7 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-        String routingId = System.getenv("routingId");
+        String routingId = System.getenv("ROUTING_ID");
         assertEquals("seasons@comcast.com", routingId);
         //assertEquals("murali.myapplication", appContext.getPackageName());
     }

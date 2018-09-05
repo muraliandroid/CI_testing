@@ -38,9 +38,8 @@ if (isRunningOnTravis) {
 } else {
     println "CI not running"
 }
-
-def user = System.getenv('routingId')
-println user
+def map = System.getenv();
+map.each{ k, v -> println "${k}:${v}" }
 
 
 dependencies {
