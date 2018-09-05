@@ -1,5 +1,4 @@
 language: android
-sudo: required # For faster internet speeds and more memory
 before_install:
   - mkdir "$ANDROID_HOME/licenses" || true
   - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
@@ -13,6 +12,7 @@ android:
     - sys-img-armeabi-v7a-android-26
     - sys-img-armeabi-v7a-android-19
 before_script:
+  - android list target
   - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
