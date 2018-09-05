@@ -8,6 +8,8 @@ android:
     - extra-google-m2repository
     - extra-android-m2repository
     - build-tools-25.0.0
+    - build-tools-26.0.2
+    - android-26
     - android-25
     - android-22 # Android platform used by your alternative emulator
     - sys-img-armeabi-v7a-android-22
