@@ -22,3 +22,13 @@ script:
 - "./gradlew build connectedCheck"
 env:
   - secure: zdmUfr4V95fll9XXLIAe0yYc0hhSVxk85lSfDIgrubpzDG9c4Ho1GCEp21aGDPw8rjoYPRjZl3JBvA5TLlGwM+Ynf28fXU/IJbsIIQJ7Af26TKveduBLP3L/jR1mrJhzkdrcn5OGr3qSd+/hc9luoY1KQx4lm0W2e141MBKBZInS0CpPyy/ij59oSygyH8oH7RMSTjCBj04csTM4N7hLeK0i8L+iAjfLXW6W8elykgOq5qhtEoUgylPX279pA0WtNepoilWbGjfs6DstpclXiucsIWsjbswEaPp0/Id72P8cWnzRN9VIKnbTzdfTtkHN1e1MMNsR8jFzDebsAK/fzPmYPfFrW/0ZbH+h3kyqyLoMIUbv1xFj7Li4ZHlnevXPVhDuLAjP8YhdgzMot9taY2vVeJJLiE0qBSfMTEooRdIF4ccesDJHvtdvtE6rsxHw8BftT4fAIVW9c17VJlUEola8rmrT6MT0A+Ctux5ivAka6Hj2qVWey57ixV5Me/uzgjaaNEwjVugfjIDsWMin69zgGMh/mSpYyINGwcHOhvmjgwpYI4m7ATWphpV+/Q2l5p9Xx6XWLcK/EmHLGW4DajE6tVOy+vdouP1jBDYbIHaH2m0ZEZ/12Yw7wdekY1ro6IwrLUNAogeqvhXn3oeeRz3z1yy+UioccowQ4xOsekk=
+after_failure:
+  # Customize this line, 'android' is the specific app module name of this project. Shows log.
+  - echo $(pwd)
+  - export MY_MOD="android"
+  - export MY_LOG_DIR="$(pwd)/${MY_MOD}/build/outputs/reports/androidTests/connected/"
+  - pwd && cd "${MY_LOG_DIR:-.}" && pwd && ls -al
+  - sudo apt-get install -qq lynx && lynx --dump index.html > myIndex.log
+  - lynx --dump com.android.builder.testing.ConnectedDevice.html > myConnectedDevice.log
+  - lynx --dump com.android.builder.testing.html > myTesting.log
+  - for file in *.log; do echo "$file"; echo "====================="; cat "$file"; done || true
