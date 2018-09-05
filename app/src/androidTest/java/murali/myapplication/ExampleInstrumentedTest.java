@@ -22,6 +22,7 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         String routingId1 = System.getenv("routingId");
+
         assertEquals("seasons@comcast.com", routingId1);
 
         String routingId = System.getenv("ROUTING_ID");
