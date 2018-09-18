@@ -20,7 +20,7 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-        String routingId = System.getenv("ROUTING_ID");
+        String routingId = System.getenv("userId");
         if (routingId.length() != 0) {
             assertTrue(true);
         } else {
