@@ -21,7 +21,7 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
         String routingId = System.getenv("userId");
-        if (routingId.length() != 0) {
+        if (routingId. != null) {
             assertTrue(true);
         } else {
             assertTrue(false);
